@@ -63,7 +63,8 @@ app.post('/end', (req, res, next) => {
      return slack.users.profile.set({
        token: process.env.SLACK_TOKEN,
        profile: JSON.stringify({
-         "status_text": "No meetings. Yay."
+         "status_text": "",
+         "status_emoji": ""
        })
      })
    })
